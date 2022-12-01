@@ -9,6 +9,9 @@ services:
       EULA: "TRUE"
       VERSION: "1.19.2"
       TYPE: "FORGE"
+      ONLINE_MODE: "FALSE"
+      ENABLE_RCON: "true"
+      MEMORY: "2G"
     tty: true
     stdin_open: true
     restart: unless-stopped
