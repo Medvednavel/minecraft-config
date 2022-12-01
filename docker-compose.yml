@@ -9,6 +9,7 @@ services:
       EULA: "TRUE"
       VERSION: "1.19.2"
       TYPE: "FORGE"
+      FORGE_VERSION: "43.1.65"
       ONLINE_MODE: "FALSE"
       ENABLE_RCON: "true"
       MEMORY: "2G"
