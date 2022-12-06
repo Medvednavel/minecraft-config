@@ -12,7 +12,7 @@ services:
       FORGE_VERSION: "43.1.65"
       ONLINE_MODE: "FALSE"
       ENABLE_RCON: "true"
-      MEMORY: "14G"
+      MEMORY: "22G"
       VIEW_DISTANCE: "10"
       ALLOW_FLIGHT: "TRUE"
     tty: true
