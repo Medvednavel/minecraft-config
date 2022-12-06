@@ -23,3 +23,4 @@ services:
       # Medved boobka
       - /home/minecraft/minecraft-data:/data
       - /home/minecraft/minecraft-config/mods:/data/mods
+      - /home/minecraft/level:/data/world
