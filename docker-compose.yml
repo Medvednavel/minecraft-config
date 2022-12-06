@@ -15,6 +15,11 @@ services:
       MEMORY: "22G"
       VIEW_DISTANCE: "10"
       ALLOW_FLIGHT: "TRUE"
+      DIFFICULTY: "normal"
+      MOTD: "Medvednavelosiped`s server"
+      ENABLE_WHITELIST: "TRUE"
+      ENFORCE_WHITELIST: "TRUE"
+      SPAWN_PROTECTION: "50"
     tty: true
     stdin_open: true
     restart: unless-stopped
