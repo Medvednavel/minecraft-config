@@ -32,9 +32,11 @@ services:
     image: offen/docker-volume-backup:v2
     environment:
       BACKUP_CRON_EXPRESSION: 0 3,15 * * *
-      AWS_S3_BUCKET_NAME:
+      AWS_ENDPOINT: s3.timeweb.com
+      AWS_S3_BUCKET_NAME: 
       AWS_ACCESS_KEY_ID:
       AWS_SECRET_ACCESS_KEY:
+      AWS_S3_PATH: /world
       BACKUP_FILENAME: backup-%Y-%m-%dT%H-%M-%S.tar.gz
       BACKUP_PRUNING_PREFIX: backup-
       BACKUP_RETENTION_DAYS: 3
