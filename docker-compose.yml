@@ -44,4 +44,7 @@ services:
     volumes:
       - /home/mnv/world_data:/backup/level:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+
     restart: unless-stopped
