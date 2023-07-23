@@ -27,7 +27,7 @@ services:
       # attach a directory relative to the directory containing this compose file
       - /home/mnv/minecraft-data:/data
       - /home/mnv/minecraft-config/mods:/data/mods
-      - world_data:/data/world
+      - /home/mnv/world_data:/data/world
   backup:
     image: offen/docker-volume-backup:v2
     environment:
@@ -42,8 +42,6 @@ services:
       BACKUP_RETENTION_DAYS: 3
     env_file: ./backup.env
     volumes:
-      - world_data:/backup/level:ro
+      - /home/mnv/world_data:/backup/level:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
     restart: unless-stopped
-volumes:
-  world_data:
