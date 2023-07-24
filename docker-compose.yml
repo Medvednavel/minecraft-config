@@ -9,7 +9,7 @@ services:
       EULA: "TRUE"
       VERSION: "1.19.2"
       TYPE: "FORGE"
-      FORGE_VERSION: "43.1.65"
+      FORGE_VERSION: "43.2.8"
       ONLINE_MODE: "FALSE"
       ENABLE_RCON: "true"
       MEMORY: "30G"
@@ -17,8 +17,6 @@ services:
       ALLOW_FLIGHT: "TRUE"
       DIFFICULTY: "normal"
       MOTD: "Medvednavelosiped`s server"
-      ENABLE_WHITELIST: "TRUE"
-      ENFORCE_WHITELIST: "TRUE"
       SPAWN_PROTECTION: "50"
     tty: true
     stdin_open: true
