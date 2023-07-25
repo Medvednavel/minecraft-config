@@ -16,6 +16,8 @@ services:
       VIEW_DISTANCE: "10"
       ALLOW_FLIGHT: "TRUE"
       DIFFICULTY: "normal"
+      SEED:
+      LEVEL_TYPE:
       MOTD: "Medvednavelosiped`s server"
       ENABLE_WHITELIST: "FALSE"
       SPAWN_PROTECTION: "50"
