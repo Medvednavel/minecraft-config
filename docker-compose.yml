@@ -27,6 +27,7 @@ services:
       - /home/mnv/minecraft-data:/data
       - /home/mnv/minecraft-config/mods:/data/mods
       - /home/mnv/level:/data/world
+      - /home/mnv/config:/data/config
   backup:
     image: offen/docker-volume-backup:v2
     environment:     
