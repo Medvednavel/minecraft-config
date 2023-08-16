@@ -41,7 +41,7 @@ services:
       BACKUP_FILENAME: "backup-%Y-%m-%dT%H-%M-%S.tar.gz"
       BACKUP_PRUNING_PREFIX: "backup-"
       BACKUP_RETENTION_DAYS: "3"
-      BACKUP_CRON_EXPRESSION: "0 12, 0 * * *"
+      BACKUP_CRON_EXPRESSION: "@daily"
     #env_file: ./backup.env
     volumes:
       - /home/mnv/level:/backup/level:ro
