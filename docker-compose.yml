@@ -8,8 +8,8 @@ services:
     environment:
       EULA: "TRUE"
       VERSION: "1.19.2"
-      TYPE: "MOHIST"
-      #FORGE_VERSION: "43.2.8"
+      TYPE: "FORGE"
+      FORGE_VERSION: "43.2.8"
       ONLINE_MODE: "FALSE"
       ENABLE_RCON: "true"
       MEMORY: "30G"
@@ -26,11 +26,10 @@ services:
     restart: unless-stopped
     volumes:
       # attach a directory relative to the directory containing this compose file
-      - ../minecraft-data:/data
-      - ./mods:/data/mods
-      - /data/level:/data/world
-      - ./config:/data/config
-      - ./plugins:/data/plugins
+      - /home/mnv/minecraft-data:/data
+      - /home/mnv/minecraft-config/mods:/data/mods
+      - /home/mnv/level:/data/world
+      - /home/mnv/config:/data/config
   backup:
     image: offen/docker-volume-backup:v2
     environment:     
