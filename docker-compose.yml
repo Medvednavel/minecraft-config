@@ -7,9 +7,9 @@ services:
       - 25565:25565
     environment:
       EULA: "TRUE"
-      VERSION: "1.19.2"
-      TYPE: "MOHIST"
-      #FORGE_VERSION: "43.2.8"
+      VERSION: "1.20.4"
+      TYPE: "KETTING"
+      FORGE_VERSION: "49.1.0"
       ONLINE_MODE: "FALSE"
       ENABLE_RCON: "true"
       MEMORY: "30G"
@@ -31,21 +31,21 @@ services:
       - /data/level:/data/world
       - ./config:/data/config
       - ./plugins:/data/plugins
-  backup:
-    image: offen/docker-volume-backup:v2
-    environment:     
-      AWS_ENDPOINT: "s3.timeweb.com"
-      AWS_S3_BUCKET_NAME: ${AWS_S3_BUCKET_NAME}
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+  #backup:
+   # image: offen/docker-volume-backup:v2
+    #environment:     
+     # AWS_ENDPOINT: "s3.timeweb.com"
+     # AWS_S3_BUCKET_NAME: ${AWS_S3_BUCKET_NAME}
+     # AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+     # AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
       #AWS_S3_PATH: "/world" 
-      BACKUP_FILENAME: "backup-%Y-%m-%dT%H-%M-%S.tar.gz"
-      BACKUP_PRUNING_PREFIX: "backup-"
-      BACKUP_RETENTION_DAYS: "3"
-      BACKUP_CRON_EXPRESSION: "@daily"
+     # BACKUP_FILENAME: "backup-%Y-%m-%dT%H-%M-%S.tar.gz"
+    #  BACKUP_PRUNING_PREFIX: "backup-"
+     # BACKUP_RETENTION_DAYS: "3"
+    #  BACKUP_CRON_EXPRESSION: "@daily"
     #env_file: ./backup.env
-    volumes:
-      - /home/mnv/level:/backup/level:ro
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    restart: unless-stopped
+   # volumes:
+    #  - /home/mnv/level:/backup/level:ro
+    #  - /var/run/docker.sock:/var/run/docker.sock:ro
+   # restart: unless-stopped
 
