@@ -7,9 +7,9 @@ services:
       - 25565:25565
     environment:
       EULA: "TRUE"
-      VERSION: "1.20.4"
+      VERSION: "1.20.1"
       TYPE: "KETTING"
-      FORGE_VERSION: "49.1.0"
+      #FORGE_VERSION: "49.1.0"
       ONLINE_MODE: "FALSE"
       ENABLE_RCON: "true"
       MEMORY: "30G"
